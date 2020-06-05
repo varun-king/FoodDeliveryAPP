@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Fat Burner",
+        "description":"Low carb, nutrient-rich meals with fat-burning profiles to support fat loss",
+        "photo":"fat_burner",
+        "price": 159.0,
+        "sku":"00011",
+        "calorie": 865,
+    },
+    {
+        "name":"Juice",
+        "description":"Our nutrient-packed cleanser with meals & organic juice for up to 14 days",
+        "photo":"juice",
+        "price": 105.0,
+        "sku":"00012",
+        "calorie": 520,
+    },
+    {
+        "name":"Keto",
+        "description":"High fat, low carb meals with moderate protein to achieve and sustain ketosis",
+        "photo":"keto",
+        "price": 159.0,
+        "sku":"00013",
+        "calorie": 630,
+    },
+    {
+        "name":"Muscle Gain",
+        "description":"Higher protein and calorie portions to support your muscle gain momentum",
+        "photo":"muscle_gain",
+        "price": 159.0,
+        "sku":"00014s",
+        "calorie": 800,
+    },
+    {
+        "name":"Prebiotic",
+        "description":"A protein-packed meal and two superb prebiotic soups per day for up to 7 days",
+        "photo":"prebiotic",
+        "price": 129.0,
+        "sku":"00015",
+        "calorie": 700,
+    }
+]

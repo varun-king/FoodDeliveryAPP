@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Customer" representedClassName="Customer" syncable="YES">
+        <attribute name="customer_email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customer_image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="customer_password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customer_phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cutomerHasOrder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderData" inverseName="orderCutomer" inverseEntity="OrderData" syncable="YES"/>
+    </entity>
+    <entity name="FoodMenu" representedClassName="FoodMenu" syncable="YES">
+        <attribute name="meal_calorie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="meal_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meal_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meal_photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meal_price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="meal_sku" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="orderIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderData" inverseName="foodOtions" inverseEntity="OrderData" syncable="YES"/>
+    </entity>
+    <entity name="OrderData" representedClassName="OrderData" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="discount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subtotal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tax" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tip" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="foodOtions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodMenu" inverseName="orderIn" inverseEntity="FoodMenu" syncable="YES"/>
+        <relationship name="orderCutomer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="cutomerHasOrder" inverseEntity="Customer" syncable="YES"/>
+    </entity>
+    <entity name="Reward" representedClassName="Reward" syncable="YES">
+        <attribute name="coupon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isUsed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="per_off" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="user_email" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Customer" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="FoodMenu" positionX="213.54296875" positionY="-74.71484375" width="128" height="150"/>
+        <element name="OrderData" positionX="90" positionY="-63" width="128" height="150"/>
+        <element name="Reward" positionX="65.65234375" positionY="-206.2265625" width="128" height="105"/>
+    </elements>
+</model>
